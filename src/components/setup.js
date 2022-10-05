@@ -8,6 +8,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 function Setup (props) {
     const [workspaceName, setWorkspaceName] = useState("");
     const [workspaceUrl, setWorkspaceUrl] = useState("");
+    const [validated, setValidated] = useState(false);
+
     const updateWorkspaceName = (e) => {
         console.log(e.target.value)
         setWorkspaceName(e.target.value);
@@ -18,7 +20,13 @@ function Setup (props) {
     };
 
     const formSubmit = async (e) => {
-        e.preventDefault();
+        const form = e.currentTarget;
+
+        if (form.checkValidity() === false) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        setValidated(true);
         let data = {
             workspaceName,
             workspaceUrl,
@@ -26,7 +34,6 @@ function Setup (props) {
         props.saveData({...props.userData, ...data})
         console.log(props.userData)
         props.nextPage(2)
-        // return await makeRequest(data);
     };
 
     return (
@@ -35,7 +42,7 @@ function Setup (props) {
             <p className='heading'>Let's set up a home for all your work</p>
             <p className='text-muted'>You can always create another workspace later</p>
         </div>
-        <Form className='signup-form'>
+        <Form  validated={validated} className='signup-form' onSubmit={formSubmit}>
             <Form.Group className="mb-3" controlId="workspaceName">
                 <Form.Label>Workspace Name</Form.Label>
                 <Form.Control 
@@ -43,6 +50,7 @@ function Setup (props) {
                     placeholder="Eden"
                     value={workspaceName}
                     onChange={updateWorkspaceName}
+                    required
                 />
             </Form.Group>
 
@@ -62,7 +70,7 @@ function Setup (props) {
                 
             </Form.Group>
 
-            <Button className='mt-3 w-100' variant="primary" type="submit" onClick={formSubmit}>
+            <Button className='mt-3 w-100' variant="primary" type="submit">
                 Create Workspace
             </Button>
         </Form>

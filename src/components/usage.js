@@ -9,22 +9,26 @@ import { RiTeamFill } from "react-icons/ri";
 
 
 function Usage (props) {
-    const [usage, setUsage] = useState("myself");
-    
+    const [usage, setUsage] = useState("MYSELF");
+    const [validated, setValidated] = useState(false);
+
     const updateUsage = (e) => {
-        console.log(e.target.value)
         setUsage(e.target.value);
     };
 
     const formSubmit = async (e) => {
-        e.preventDefault();
+        const form = e.currentTarget;
+
+        if (form.checkValidity() === false) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        setValidated(true);
         let data = {
             usage
         };
         props.saveData({...props.userData, ...data})
-        console.log(props.userData)
         props.nextPage(3)
-        // return await makeRequest(data);
     };
 
     return (
@@ -33,7 +37,7 @@ function Usage (props) {
             <p className='heading'>How are you planning to use Eden?</p>
             <p className='text-muted'>We'll streamline your work experience accordingly.</p>
         </div>
-        <Form className='signup-form'>
+        <Form validated={validated} className='signup-form' onSubmit={formSubmit}>
             <Form.Group className="d-md-flex justify-content-around mb-3" controlId="usage">
                 <Form.Check 
                     type="radio"
@@ -47,8 +51,10 @@ function Usage (props) {
                             </Card.Body>
                         </Card>
                     }
-                    value="MYSELF"
+                    value=""
                     onChange={updateUsage}
+                    checked
+                    required
                 />
                 <Form.Check 
                     type="radio"
@@ -64,9 +70,10 @@ function Usage (props) {
                     }
                     value="TEAM"
                     onChange={updateUsage}
+                    required
                 />
             </Form.Group>
-            <Button className='mt-3 w-100' variant="primary" type="submit" onClick={formSubmit}>
+            <Button className='mt-3 w-100' variant="primary" type="submit">
                 Create Workspace
             </Button>
         </Form>
