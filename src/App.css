@@ -27,9 +27,7 @@ html .App {
 .MuiStep-root .MuiSvgIcon-root .MuiStepIcon-text{
   fill: white;
 }
-.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
-  color: #654ee0;
-}
+
 .MuiStep-root .Mui-active .MuiStepConnector-line,
 .MuiStep-root .Mui-completed .MuiStepConnector-line {
   padding: 1px;
@@ -39,7 +37,11 @@ html .App {
   background-color: #654ee0;
 }
 
-.MuiStep-root:nth-child(2) .MuiStepConnector-root .MuiStepConnector-line {
+.MuiStep-root .MuiStepConnector-line {
+  border-color: #f1f1f5;
+}
+
+.MuiStep-root.active-step + .MuiStep-root .MuiStepConnector-root .MuiStepConnector-line {
   padding: 1px;
   margin-top: -1px;
   border-top-width: unset;
@@ -47,6 +49,7 @@ html .App {
   background-color: #654ee0;
   background: linear-gradient(to right, #654ee0 50%, #f1f1f5 10%);
 }
+
 .signup-form {
   width: 60%;
   margin: auto;
@@ -69,6 +72,10 @@ html .App {
 .App .btn-primary {
   --bs-btn-bg: #654ee0;
   --bs-btn-border-color: #654ee0;
+  --bs-btn-hover-bg: #654ee0;
+  --bs-btn-hover-border-color: #654ee0;
+  --bs-btn-active-bg: #654ee0;
+  --bs-btn-active-border-color: #654ee0;
 }
 
 @media only screen and (max-width: 1024px) {

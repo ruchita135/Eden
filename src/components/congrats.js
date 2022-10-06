@@ -3,7 +3,7 @@ import '../App.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { HiCheckCircle } from "react-icons/hi";
-
+import { IconContext } from "react-icons";
 
 function Congrats (props) {
   console.log(props.userData)
@@ -15,10 +15,12 @@ function Congrats (props) {
   return (
     <div>
       <div className='p-4 text-center'>
-        <HiCheckCircle size={90} />
+        <IconContext.Provider value={{ color: "#654ee0" }}>
+          <HiCheckCircle size={90} />
+        </IconContext.Provider>
       </div>
       <div className='text-center mb-5'>
-        <p className='heading'>Congratulations,{props.userData.fullName}!</p>
+        <p className='heading'>Congratulations, {props.userData.fullName}!</p>
         <p className='text-muted'>You have completed onboarding, you can start using the Eden!</p>
       </div>
 
