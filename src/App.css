@@ -22,16 +22,18 @@
 }
 
 .MuiStep-root .MuiSvgIcon-root .MuiStepIcon-text{
-  fill: black;
+  fill: white;
 }
-
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: #654ee0;
+}
 .MuiStep-root .Mui-active .MuiStepConnector-line,
 .MuiStep-root .Mui-completed .MuiStepConnector-line {
   padding: 1px;
   margin-top: -1px;
   border-top-width: unset;
   border-top-style: unset;
-  background-color: blue;
+  background-color: #654ee0;
 }
 
 .MuiStep-root:nth-child(2) .MuiStepConnector-root .MuiStepConnector-line {
@@ -39,8 +41,8 @@
   margin-top: -1px;
   border-top-width: unset;
   border-top-style: unset;
-  background-color: blue;
-  background: linear-gradient(to right, blue 50%, grey 50%);
+  background-color: #654ee0;
+  background: linear-gradient(to right, #654ee0 50%, #f1f1f5 10%);
 }
 .signup-form {
   width: 70%;
@@ -50,6 +52,19 @@
 .heading {
   font-size: 1.8rem;
   font-weight: bold;
+}
+
+.form-check-input:checked ~ label {
+  border: 1px solid #654ee0;
+  border-radius: 7px;
+}
+
+.form-check-input[type=radio] {
+  display: none;
+}
+
+.button {
+  color: #654ee0;
 }
 
 @media only screen and (max-width: 768px) {

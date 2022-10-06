@@ -29,7 +29,7 @@ function App() {
           case 2:
             return <Usage nextPage={setSignupPage} saveData={setUserData} userData={userData} />
           case 3:
-            return <Congrats userData={userData}/>
+            return <Congrats nextPage={setSignupPage} userData={userData}/>
           default:
             return <Welcome />
         }

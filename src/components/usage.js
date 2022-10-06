@@ -52,6 +52,7 @@ function Usage (props) {
                         </Card>
                     }
                     value=""
+                    name="usage"
                     onChange={updateUsage}
                     checked
                     required
@@ -69,6 +70,7 @@ function Usage (props) {
                         </Card>
                     }
                     value="TEAM"
+                    name="usage"
                     onChange={updateUsage}
                     required
                 />

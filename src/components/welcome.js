@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+
 function Welcome (props) {
     const [fullName, setFullName] = useState("");
     const [displayName, setDisplayName] = useState("");
@@ -63,7 +64,7 @@ function Welcome (props) {
                 />
             </Form.Group>
 
-            <Button className='mt-3 w-100' variant="primary" type="submit" >
+            <Button className='button mt-3 w-100' variant="primary" type="submit" >
                 Create Workspace
             </Button>
         </Form>
