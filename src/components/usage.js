@@ -84,7 +84,7 @@ function Usage (props) {
                     required
                 />
             </Form.Group>
-            <Button className='mt-3 w-100' variant="primary" type="submit">
+            <Button className='mt-3 w-100 btn-lg' variant="primary" type="submit">
                 Create Workspace
             </Button>
         </Form>

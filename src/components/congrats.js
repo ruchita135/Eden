@@ -25,7 +25,7 @@ function Congrats (props) {
       </div>
 
       <Form className='signup-form' onSubmit={formSubmit}>
-        <Button className='mt-3 w-100' variant="primary" type="submit">
+        <Button className='mt-3 w-100 btn-lg' variant="primary" type="submit">
           Launch Eden
         </Button>
       </Form>
