@@ -31,7 +31,7 @@ function App() {
           case 3:
             return <Congrats nextPage={setSignupPage} userData={userData}/>
           default:
-            return <Welcome />
+            return <Congrats nextPage={setSignupPage} userData={userData}/>
         }
       })()}
       

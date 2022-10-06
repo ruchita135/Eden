@@ -1,6 +1,10 @@
+html .App {
+  font-family: 'Inter', sans-serif;
+}
+
 .App {
   background-color: white;
-  width: 40%;
+  width: 50%;
   margin: auto;
 }
 
@@ -13,7 +17,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .MuiStep-root .MuiStepConnector-horizontal {
@@ -45,7 +48,7 @@
   background: linear-gradient(to right, #654ee0 50%, #f1f1f5 10%);
 }
 .signup-form {
-  width: 70%;
+  width: 60%;
   margin: auto;
 }
 
@@ -63,12 +66,30 @@
   display: none;
 }
 
-.button {
-  color: #654ee0;
+.App .btn-primary {
+  --bs-btn-bg: #654ee0;
+  --bs-btn-border-color: #654ee0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .signup-form {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .App {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-  .App {
+  .heading {
+    font-size: 1.2rem;
+  }
+  .signup-form {
     width: 90%;
+    margin: auto;
   }
 }
