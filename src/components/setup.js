@@ -11,7 +11,6 @@ function Setup (props) {
     const [validated, setValidated] = useState(false);
 
     const updateWorkspaceName = (e) => {
-        console.log(e.target.value)
         setWorkspaceName(e.target.value);
     };
     
@@ -32,7 +31,6 @@ function Setup (props) {
             workspaceUrl,
         };
         props.saveData({...props.userData, ...data})
-        console.log(props.userData)
         props.nextPage(2)
     };
 

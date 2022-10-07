@@ -1,6 +1,6 @@
-import logo from './logo.jpg';
 import './App.css';
 import React, { useState } from 'react'
+import Header from './components/header';
 import Welcome from './components/welcome';
 import Setup from './components/setup';
 import Usage from './components/usage';
@@ -12,14 +12,16 @@ function App() {
   const [userData, setUserData] = useState({});
   return (
     <div className="App">
-      <header className="App-header my-5">
-        <img className='px-2' alt="app-logo" src={logo}/>
-        <div className='App-name font-weight-bold'>Eden</div>
-      </header>
+      
+      {/* Header */}
+        <Header />
+      {/* Stepper */}
       <div className="mb-5 w-60 m-auto">
         <SignupStepper step={signupPage}/>
       </div>
       
+
+      {/* Form */}
       {(() => {
         switch (signupPage) {
           case 0:

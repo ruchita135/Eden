@@ -90,6 +90,6 @@ function Usage (props) {
         </Form>
       </div>
     );
-  }
+}
 
-  export default Usage;
+export default Usage;

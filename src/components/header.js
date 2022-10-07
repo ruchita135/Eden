@@ -1,11 +1,14 @@
-function Header() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img alt="Logo" src={logo}/>
-        </header>
-      </div>
-    );
-  }
+import * as React from 'react';
+import logo from '../logo.jpg';
+import '../App.css';
 
-  export default Header;
+function Header () {
+    return (
+        <header className="App-header my-5">
+            <img className='px-2' alt="app-logo" src={logo}/>
+            <div className='App-name font-weight-bold'>Eden</div>
+        </header>
+    )
+}
+
+export default Header;

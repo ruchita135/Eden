@@ -6,7 +6,6 @@ import { HiCheckCircle } from "react-icons/hi";
 import { IconContext } from "react-icons";
 
 function Congrats (props) {
-  console.log(props.userData)
   const formSubmit = async (e) => {
     e.preventDefault()
     props.nextPage(4)

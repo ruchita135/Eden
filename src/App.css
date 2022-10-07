@@ -18,6 +18,8 @@ html .App {
   justify-content: center;
 }
 
+/* Stepper */
+
 .MuiStep-root .MuiStepConnector-horizontal {
   left: calc(-50% + 12px);
   right: calc(50% + 12px);
@@ -40,6 +42,8 @@ html .App {
   background: linear-gradient(to right, #654ee0 50%, #f1f1f5 50%);
 }
 
+/* Form */
+
 .signup-form {
   width: 60%;
   margin: auto;
@@ -59,6 +63,8 @@ html .App {
   display: none;
 }
 
+/* Button */
+
 .App .btn-primary {
   --bs-btn-bg: #654ee0;
   --bs-btn-border-color: #654ee0;
@@ -67,6 +73,8 @@ html .App {
   --bs-btn-active-bg: #654ee0;
   --bs-btn-active-border-color: #654ee0;
 }
+
+/* Responsive */
 
 @media only screen and (max-width: 1024px) {
   .App {
@@ -80,8 +88,6 @@ html .App {
     margin: auto;
   }
 }
-
-
 
 @media only screen and (max-width: 768px) {
   .App {
