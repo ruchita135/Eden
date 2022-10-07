@@ -33,19 +33,19 @@ function Usage (props) {
     };
 
     return (
-      <div className='container'>
+      <div className='container mb-3'>
         <div className='text-center mb-5'>
             <p className='heading'>How are you planning to use Eden?</p>
             <p className='text-muted'>We'll streamline your work experience accordingly.</p>
         </div>
         <Form validated={validated} className='signup-form' onSubmit={formSubmit}>
-            <Form.Group className="d-md-flex justify-content-around mb-3" controlId="usage">
+            <Form.Group className="d-flex justify-content-center align-items-stretch mb-3" controlId="usage">
                 <Form.Check 
                     type="radio"
                     id="myself"
                     label={
-                        <Card style={{width: "12rem"}}>
-                            <Card.Body className='p-4'>
+                        <Card>
+                            <Card.Body>
                                 <Card.Title className="mb-4">
                                     <IconContext.Provider value={{ color: "#654ee0" }}>
                                         <RiUserFill size={25} />
@@ -66,8 +66,8 @@ function Usage (props) {
                     type="radio"
                     id="team"
                     label={
-                        <Card style={{width: "12rem"}}>
-                            <Card.Body className='p-4'>
+                        <Card>
+                            <Card.Body>
                                 <Card.Title className="mb-4">
                                     <IconContext.Provider value={{ color: "#654ee0" }}>
                                         <RiTeamFill size={25} />

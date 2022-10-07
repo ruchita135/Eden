@@ -35,7 +35,7 @@ function Setup (props) {
     };
 
     return (
-      <div className='container'>
+      <div className='container  mb-3'>
         <div className='text-center mb-5'>
             <p className='heading'>Let's set up a home for all your work</p>
             <p className='text-muted'>You can always create another workspace later</p>
@@ -45,6 +45,7 @@ function Setup (props) {
                 <Form.Label>Workspace Name</Form.Label>
                 <Form.Control 
                     type="text" 
+                    name="workspaceName"
                     placeholder="Eden"
                     value={workspaceName}
                     onChange={updateWorkspaceName}
@@ -57,7 +58,8 @@ function Setup (props) {
                 <InputGroup className="mb-3">
                     <InputGroup.Text id="basic-addon1" className="text-muted">www.eden.com/ </InputGroup.Text>
                     <Form.Control 
-                        type="text" 
+                        type="url" 
+                        name="workspaceUrl"
                         placeholder="Example" 
                         aria-label="workspaceUrl"
                         aria-describedby="basic-addon1"

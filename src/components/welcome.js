@@ -33,7 +33,7 @@ function Welcome(props) {
     };
 
     return (
-        <div className='container'>
+        <div className='container  mb-3'>
             <div className='text-center mb-5'>
                 <p className='heading'>Welcome! First things first...</p>
                 <p className='text-muted'>You can always change them later.</p>
@@ -43,6 +43,7 @@ function Welcome(props) {
                     <Form.Label>Full Name</Form.Label>
                     <Form.Control
                         type="text"
+                        name="fullName"
                         placeholder="Steve Jobs"
                         value={fullName}
                         onChange={updateFullName}
@@ -54,6 +55,7 @@ function Welcome(props) {
                     <Form.Label>Display Name</Form.Label>
                     <Form.Control
                         type="text"
+                        name="displayName"
                         placeholder="Steve"
                         value={displayName}
                         onChange={updateDisplayName}

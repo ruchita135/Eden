@@ -4,7 +4,7 @@ html .App {
 
 .App {
   background-color: white;
-  width: 50%;
+  width: 50vw;
   margin: auto;
 }
 
@@ -25,8 +25,16 @@ html .App {
   right: calc(50% + 12px);
 }
 
-.MuiStep-root .Mui-active .MuiStepConnector-line,
-.MuiStep-root .Mui-completed .MuiStepConnector-line {
+/* svg .active-step.MuiStep-root.Mui-active.MuiStepLabel-root.MuiStepLabel-iconContainer.MuiSvgIcon-root.MuiSvgIcon-root-MuiStepIcon-root {
+  color: #654ee0;
+  border: none;
+} */
+
+
+.MuiStep-root .Mui-active .MuiStepConnector-line
+,
+.MuiStep-root .Mui-completed .MuiStepConnector-line 
+{
   padding: 0.5px 0;
   background: #654ee0;
 }
@@ -45,13 +53,24 @@ html .App {
 /* Form */
 
 .signup-form {
-  width: 60%;
+  width: 26rem;
   margin: auto;
 }
 
 .heading {
   font-size: 1.7rem;
   font-weight: bold;
+}
+
+.App .form-check {
+  padding: 0;
+  max-width: 12rem; 
+  min-width: auto;
+
+}
+
+.App .form-check:first-child {
+  margin-right: 2rem;
 }
 
 .form-check-input:checked ~ label {
@@ -63,6 +82,9 @@ html .App {
   display: none;
 }
 
+.App .card-body {
+  padding: 1.5rem;
+}
 /* Button */
 
 .App .btn-primary {
@@ -76,41 +98,39 @@ html .App {
 
 /* Responsive */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 992px) {
   .App {
     width: 60%;
   }
   .heading {
     font-size: 1.5rem;
   }
-  .signup-form {
-    width: 75%;
-    margin: auto;
-  }
 }
 
 @media only screen and (max-width: 768px) {
-  .App {
-    width: 80%;
-  }
-  .heading {
-    font-size: 1.2rem;
-  }
-  .signup-form {
-    width: 70%;
-    margin: auto;
-  }
-}
-
-@media only screen and (max-width: 425px) {
   .App {
     width: 100%;
   }
   .heading {
     font-size: 1.2rem;
   }
+}
+
+@media only screen and (max-width: 460px) {
+  .heading {
+    font-size: 1.2rem;
+  }
   .signup-form {
-    width: 90%;
+    width: 18rem;
     margin: auto;
+  }
+  .App .form-check {
+    max-width: 8rem; 
+  }
+  .App .card-title {
+    font-size: 1rem;
+  }
+  .App .card-text {
+    font-size: 0.75rem;
   }
 }

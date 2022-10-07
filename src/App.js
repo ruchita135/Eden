@@ -15,11 +15,9 @@ function App() {
       
       {/* Header */}
         <Header />
+        
       {/* Stepper */}
-      <div className="mb-5 w-60 m-auto">
         <SignupStepper step={signupPage}/>
-      </div>
-      
 
       {/* Form */}
       {(() => {

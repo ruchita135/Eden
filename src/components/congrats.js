@@ -12,7 +12,7 @@ function Congrats (props) {
   };
 
   return (
-    <div>
+    <div className='container  mb-3'>
       <div className='p-4 text-center'>
         <IconContext.Provider value={{ color: "#654ee0" }}>
           <HiCheckCircle size={90} />
