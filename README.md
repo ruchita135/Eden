@@ -2,7 +2,7 @@
 
 ## Description
 
-This application is bult on React and uses Material UI and Bootstrap library.
+This application is bult on **React** and uses **Material UI** and **Bootstrap** library.
 This is a sample onboarding flow for Eden application.
 The sign up process is divided into 4 steps viz. _Welcome, Setup, Usage_ and _Congratulations_.
 There are 2 states handled in this react app as mentioned below
@@ -13,11 +13,10 @@ There are 2 states handled in this react app as mentioned below
 
 Clone this application on your local machine
 
-```sh
-cd eden
-npm i
-node start
-```
+
+- ``` cd eden ```
+- ``` npm i ```
+- ``` npm start ```
 
 ## Deployment
 

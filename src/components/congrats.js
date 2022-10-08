@@ -1,20 +1,15 @@
 import * as React from 'react';
 import '../App.css';
+import '../css/form.css';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import { HiCheckCircle } from "react-icons/hi";
-import { IconContext } from "react-icons";
+import { HiCheckCircle } from 'react-icons/hi';
+import { IconContext } from 'react-icons';
 
 function Congrats (props) {
-  const formSubmit = async (e) => {
-    e.preventDefault()
-    props.nextPage(4)
-  };
-
   return (
     <div className='container  mb-3'>
       <div className='p-4 text-center'>
-        <IconContext.Provider value={{ color: "#654ee0" }}>
+        <IconContext.Provider value={{ color: '#654ee0' }}>
           <HiCheckCircle size={90} />
         </IconContext.Provider>
       </div>
@@ -23,13 +18,11 @@ function Congrats (props) {
         <p className='text-muted'>You have completed onboarding, you can start using the Eden!</p>
       </div>
 
-      <Form className='signup-form' onSubmit={formSubmit}>
-        <Button className='mt-3 w-100 btn-lg' variant="primary" type="submit">
+      <div className='signup-form' >
+        <Button className='mt-3 w-100 btn-lg' variant='primary' onClick={() => {alert('Thank you')}}>
           Launch Eden
         </Button>
-      </Form>
-      
-
+      </div>
     </div>
   );
 }

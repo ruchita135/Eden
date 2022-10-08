@@ -1,0 +1,19 @@
+/* Stepper */
+.MuiStep-root .MuiStepConnector-horizontal {
+  left: calc(-50% + 12px);
+  right: calc(50% + 12px);
+}
+.MuiStep-root .Mui-active .MuiStepConnector-line,
+.MuiStep-root .Mui-completed .MuiStepConnector-line {
+  padding: 0.5px 0;
+  background: #654ee0;
+}
+.MuiStep-root .MuiStepConnector-line {
+  padding: 0.5px 0;
+  border-top-style: unset;
+  background: #f1f1f5;
+}
+.MuiStep-root.active-step+.MuiStep-root .MuiStepConnector-root .MuiStepConnector-line {
+  padding: 0.5px 0;
+  background: linear-gradient(to right, #654ee0 50%, #f1f1f5 50%);
+}

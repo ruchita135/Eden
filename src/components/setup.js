@@ -1,13 +1,13 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
-import { useState } from 'react'
+import '../css/form.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
 function Setup (props) {
-    const [workspaceName, setWorkspaceName] = useState("");
-    const [workspaceUrl, setWorkspaceUrl] = useState("");
+    const [workspaceName, setWorkspaceName] = useState('');
+    const [workspaceUrl, setWorkspaceUrl] = useState('');
     const [validated, setValidated] = useState(false);
 
     const updateWorkspaceName = (e) => {
@@ -41,36 +41,37 @@ function Setup (props) {
             <p className='text-muted'>You can always create another workspace later</p>
         </div>
         <Form  validated={validated} className='signup-form' onSubmit={formSubmit}>
-            <Form.Group className="mb-3" controlId="workspaceName">
+            <Form.Group className='mb-3' controlId='workspaceName'>
                 <Form.Label>Workspace Name</Form.Label>
                 <Form.Control 
-                    type="text" 
-                    name="workspaceName"
-                    placeholder="Eden"
+                    type='text' 
+                    name='workspaceName'
+                    placeholder='Eden'
                     value={workspaceName}
                     onChange={updateWorkspaceName}
                     required
                 />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="workspaceUrl">
-                <Form.Label>Workspace URL <span className="text-muted">(optional)</span></Form.Label>
-                <InputGroup className="mb-3">
-                    <InputGroup.Text id="basic-addon1" className="text-muted">www.eden.com/ </InputGroup.Text>
+            <Form.Group className='mb-3' controlId='workspaceUrl'>
+                <Form.Label>Workspace URL <span className='text-muted'>(optional)</span></Form.Label>
+                <InputGroup className='mb-3'>
+                    <InputGroup.Text id='basic-addon1' className='text-muted'>www.eden.com/ </InputGroup.Text>
                     <Form.Control 
-                        type="url" 
-                        name="workspaceUrl"
-                        placeholder="Example" 
-                        aria-label="workspaceUrl"
-                        aria-describedby="basic-addon1"
+                        type='text' 
+                        name='workspaceUrl'
+                        placeholder='Example' 
+                        aria-label='workspaceUrl'
+                        aria-describedby='basic-addon1'
                         value={workspaceUrl}
                         onChange={updateWorkspaceUrl}
+                        pattern='[A-Za-z0-9]+$'
                     />
                 </InputGroup>
                 
             </Form.Group>
 
-            <Button className='mt-3 w-100 btn-lg' variant="primary" type="submit">
+            <Button className='mt-3 w-100 btn-lg' variant='primary' type='submit'>
                 Create Workspace
             </Button>
         </Form>

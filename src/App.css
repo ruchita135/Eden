@@ -1,103 +1,25 @@
 html .App {
   font-family: 'Inter', sans-serif;
 }
-
 .App {
   background-color: white;
   width: 50vw;
   margin: auto;
 }
-
 .App-name {
   font-size: 1.8rem;
-  font-weight: bold;  
+  font-weight: bold;
 }
-
 .App-header {
   display: flex;
   justify-content: center;
 }
-
-/* Stepper */
-
-.MuiStep-root .MuiStepConnector-horizontal {
-  left: calc(-50% + 12px);
-  right: calc(50% + 12px);
-}
-
-/* svg .active-step.MuiStep-root.Mui-active.MuiStepLabel-root.MuiStepLabel-iconContainer.MuiSvgIcon-root.MuiSvgIcon-root-MuiStepIcon-root {
-  color: #654ee0;
-  border: none;
-} */
-
-
-.MuiStep-root .Mui-active .MuiStepConnector-line
-,
-.MuiStep-root .Mui-completed .MuiStepConnector-line 
-{
-  padding: 0.5px 0;
-  background: #654ee0;
-}
-
-.MuiStep-root .MuiStepConnector-line {
-  padding: 0.5px 0;
-  border-top-style: unset;  
-  background: #f1f1f5;
-}
-
-.MuiStep-root.active-step + .MuiStep-root .MuiStepConnector-root .MuiStepConnector-line {
-  padding: 0.5px 0;
-  background: linear-gradient(to right, #654ee0 50%, #f1f1f5 50%);
-}
-
-/* Form */
-
-.signup-form {
-  width: 26rem;
-  margin: auto;
-}
-
 .heading {
   font-size: 1.7rem;
   font-weight: bold;
 }
 
-.App .form-check {
-  padding: 0;
-  max-width: 12rem; 
-  min-width: auto;
-
-}
-
-.App .form-check:first-child {
-  margin-right: 2rem;
-}
-
-.form-check-input:checked ~ label {
-  border: 1px solid #654ee0;
-  border-radius: 7px;
-}
-
-.form-check-input[type=radio] {
-  display: none;
-}
-
-.App .card-body {
-  padding: 1.5rem;
-}
-/* Button */
-
-.App .btn-primary {
-  --bs-btn-bg: #654ee0;
-  --bs-btn-border-color: #654ee0;
-  --bs-btn-hover-bg: #654ee0;
-  --bs-btn-hover-border-color: #654ee0;
-  --bs-btn-active-bg: #654ee0;
-  --bs-btn-active-border-color: #654ee0;
-}
-
 /* Responsive */
-
 @media only screen and (max-width: 992px) {
   .App {
     width: 60%;
