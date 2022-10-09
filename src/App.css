@@ -42,17 +42,4 @@ html .App {
   .heading {
     font-size: 1.2rem;
   }
-  .signup-form {
-    width: 18rem;
-    margin: auto;
-  }
-  .App .form-check {
-    max-width: 8rem; 
-  }
-  .App .card-title {
-    font-size: 1rem;
-  }
-  .App .card-text {
-    font-size: 0.75rem;
-  }
 }
